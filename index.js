@@ -5,3 +5,5 @@ fetch("https://api.magicthegathering.io/v1/cards")
 console.log("number of cards", data.cards.length)
 let filteredArray = data.cards
 })
+
+//made an alteration
