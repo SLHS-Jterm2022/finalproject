@@ -1,0 +1,25 @@
+.indexlinks{
+ text-align: center;
+}
+
+.indexlinks > a {
+padding: 0 2% 0 2%;
+}
+
+#main{
+    border: 1px solid black;
+    height: 550px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.cardBlock{
+    border: 1px solid black;
+    width: 25%;
+}
+
+.cardIMG{
+    width: 100%;
+}
