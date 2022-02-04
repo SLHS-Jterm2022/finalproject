@@ -9,6 +9,11 @@ padding: 0 2% 0 2%;
 #main{
     border: 1px solid black;
     height: 550px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    overflow: scroll;
 }
 
 .heading{
@@ -22,4 +27,14 @@ padding: 0 2% 0 2%;
 
 .cardIMG{
     width: 100%;
+}
+
+.cardBlock{
+    margin-top: 1%;
+    padding: 1% 1% ;
+    border-radius: 20px;
+}
+
+.cardBlock > p {
+    text-align: center;
 }
