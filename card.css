@@ -25,6 +25,18 @@ body {
     background-repeat: no-repeat;
 }
 
+a {
+    color: rgba(230, 17, 17, 0.952);
+    margin-left: 2%;
+    margin-bottom: -5%;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         background-image: url("https://cdn1.dotesports.com/wp-content/uploads/2019/04/19122544/Gods-of-Armonkhet-MTG-War-of-the-Spark.jpg");

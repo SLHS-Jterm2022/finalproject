@@ -21,3 +21,4 @@ fetch("https://api.magicthegathering.io/v1/cards/457213")
             <p>Rarity: ${card.rarity}</p>`
             mainEL.appendChild(tempElement);
     })
+
