@@ -3,7 +3,7 @@ h1 {
 
     text-align: center;
     color:white;
-    background-color:black
+    border: solid black;
 }
 img {
     border: solid;
@@ -18,8 +18,8 @@ background-repeat: no-repeat;
 flex-wrap: wrap;
 
 background-size: 1500px 1450px;
-background-color: black;
-border: red; 
+/* background-color: black ; */
+border:white; 
 
 }
 .peoplebox {
@@ -54,23 +54,36 @@ width: 100%; */
 
 
 p{
-color: white;
-background-color: black;
+color:white;
+border: solid black;
 
+/* background-color: white; */
 
 }
 h2{
-color:white;
-background-color: black;
+color: white;
+border: black;
 text-align: center;
 
+/* background-color: white; */
 
 
 }
 h3 {
 color: white;
+border: black;
+
+/* background-color:white; */
 
 
-
+}
+body {
+    background-image: url("https://i.pinimg.com/originals/e6/df/ea/e6dfeaa166a0604845653ed932f4a034.jpg");
+    background-size: 122%;
+}
+a{
+color: white;
+text-decoration: none;
+flex-direction: row;
 
 }
