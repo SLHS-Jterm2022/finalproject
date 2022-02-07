@@ -57,10 +57,10 @@ body {
     background-size: 122%;
 }
 
-#menu1{
-    width: 50%;
+.show{
+    display: block;
 }
 
-#menu2{
-    width: 50%;
+.hide{
+    display: none;
 }
