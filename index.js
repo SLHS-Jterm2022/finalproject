@@ -2,10 +2,10 @@ let cards;
 let currentPage = 1;
 fetch("https://api.magicthegathering.io/v1/cards")
 .then(res => res.json())
-.then(respos => cards = respos)
+.then(respos => cards = respos.cards)
 .then(data => {
-console.log("number of cards", data.cards)
-let filteredArray = data.cards.filter(ele => ele.imageUrl)
+console.log("number of cards", data)
+let filteredArray = data.filter(ele => ele.imageUrl)
 for(const ele of filteredArray) {
    let mainEL = document.getElementById('main')
    let tempEL = document.createElement('div')
@@ -32,13 +32,13 @@ function getCards() {
     console.log("In Function Get Card:", currentPage)
     fetch(`https://api.magicthegathering.io/v1/cards?page=${currentPage}`)
     .then(res => res.json())
-    .then(respos => cards = respos)
+    .then(respos => cards = respos.cards)
     .then(data => {
-       console.log("SubTest", data.cards[0])
+    //    console.log("SubTest", data.cards[0])
    //  console.log("number of cards", data.cards.length)
     let mainElement = document.getElementById('main');
     mainElement.innerHTML = ""
-    let filteredArray = data.cards
+    let filteredArray = data
     // let filteredArray = data.cards.filter(ele => ele.imageUrl)
     for(const ele of filteredArray) {
        console.log("ElementInForLoop", ele.colorIdentity)
@@ -85,8 +85,11 @@ menu1.addEventListener("change", function(event) {
         
         menu2.addEventListener("change", function(event) {
             console.log("If statement", event.target.value)
-            console.log('type of cards' , typeof(cards));
-            let filteredArray = cards.filter(card => card.colors === event.target.value)
+            console.log('type of cards' , cards);
+            let noColorsArray = cards.filter(card => card.colors);
+            let noColorsArrayNew = noColorsArray.filter(card => card.colors[0] === event.target.value)
+           
+            console.log("Filtered Array", noColorsArrayNew)
         })
     }
 
