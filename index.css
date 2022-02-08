@@ -4,7 +4,7 @@
 
 .indexlinks > a {
 padding: 0 2% 0 2%;
-background-color: white;
+background-color: rgb(218, 185, 0);
 text-decoration: none;
 }
 
@@ -16,12 +16,13 @@ text-decoration: none;
     flex-wrap: wrap;
     justify-content:space-evenly;
     overflow: scroll;
+    
 }
 
 .heading{
     text-align: center;
     color: black;
-    background-color: white;
+    background-color: rgb(218, 185, 0);
 }
 
 .cardBlock{
@@ -64,3 +65,4 @@ body {
 .hide{
     display: none;
 }
+
