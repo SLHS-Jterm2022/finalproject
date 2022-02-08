@@ -4,6 +4,8 @@
 
 .indexlinks > a {
 padding: 0 2% 0 2%;
+background-color: white;
+text-decoration: none;
 }
 
 #main{
@@ -18,6 +20,8 @@ padding: 0 2% 0 2%;
 
 .heading{
     text-align: center;
+    color: black;
+    background-color: white;
 }
 
 .cardBlock{
@@ -33,8 +37,30 @@ padding: 0 2% 0 2%;
     margin-top: 1%;
     padding: 1% 1% ;
     border-radius: 20px;
+    background-color: white;
 }
 
 .cardBlock > p {
     text-align: center;
+}
+
+.menus {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   align-items: center;
+   margin: 0 auto;
+}
+
+body {
+    background-image: url("https://cdn1.dotesports.com/wp-content/uploads/2019/04/19122544/Gods-of-Armonkhet-MTG-War-of-the-Spark.jpg");
+    background-size: 122%;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
 }
