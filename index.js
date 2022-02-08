@@ -4,8 +4,10 @@ fetch("https://api.magicthegathering.io/v1/cards")
 .then(res => res.json())
 .then(respos => cards = respos.cards)
 .then(data => {
+
 console.log("number of cards", data)
 let filteredArray = data.filter(ele => ele.imageUrl)
+
 for(const ele of filteredArray) {
    let mainEL = document.getElementById('main')
    let tempEL = document.createElement('div')
@@ -16,6 +18,7 @@ for(const ele of filteredArray) {
    tempEL.addEventListener("click", cardClicked)
    mainEL.appendChild(tempEL)
 }
+
 })
 
 function cardClicked(event) {

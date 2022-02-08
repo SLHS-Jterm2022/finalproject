@@ -2,36 +2,73 @@ h1 {
     border: solid ;
 
     text-align: center;
-    color:red;
-
+    color:white;
+    background-color:black
 }
 img {
     border: solid;
     width: 150px;
-
+    
 
 }
 .people {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 background-repeat: no-repeat;
-background-image:url('https://dw9to29mmj727.cloudfront.net/promo/2016/5336-SeriesHeaders_Tier01_Magic_2000x800.jpg');
-background-size: 1500px 1450px
-}
-.people > div {
-width: 100%;
+flex-wrap: wrap;
 
-
+background-size: 1500px 1450px;
+background-color: black;
+border: red; 
 
 }
+.peoplebox {
+    width: 50%;
+
+
+}
+
+/* .people > div {
+width: 100%; */
+
+  
+
+
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+
+
+
+}
+.row::after {
+    content: "";
+    clear: "";
+    display: table;
+
+
+}
+
+
 p{
-color: red;
+color: white;
+background-color: black;
+
+
+}
+h2{
+color:white;
+background-color: black;
+text-align: center;
 
 
 
 }
 h3 {
-color: red;
+color: white;
 
 
 
