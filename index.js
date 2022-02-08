@@ -10,8 +10,8 @@ for(const ele of filteredArray) {
    let mainEL = document.getElementById('main')
    let tempEL = document.createElement('div')
    tempEL.classList.add('cardBlock')
-   tempEL.innerHTML = `<img class = "cardIMG" src=${ele.imageUrl}>
-   <p>${ele.name}</p>`;
+   tempEL.innerHTML = `<img class = "cardIMG noProp" src=${ele.imageUrl}>
+   <p class = "noProp">${ele.name}</p>`;
    tempEL.setAttribute("name", `${ele.multiverseid}`);
    tempEL.addEventListener("click", cardClicked)
    mainEL.appendChild(tempEL)
@@ -25,6 +25,8 @@ function cardClicked(event) {
 
 
 }
+
+
 
 
 function getCards() {
@@ -90,6 +92,24 @@ menu1.addEventListener("change", function(event) {
             let noColorsArrayNew = noColorsArray.filter(card => card.colors[0] === event.target.value)
            
             console.log("Filtered Array", noColorsArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noColorsArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
         })
     }
 
@@ -100,6 +120,33 @@ menu1.addEventListener("change", function(event) {
         menu5.setAttribute("class", "hide")
         menu6.setAttribute("class", "hide")
         menu7.setAttribute("class", "hide")
+
+        menu3.addEventListener("change", function(event){
+            console.log("If statement", event.target.value)
+            console.log('type of cards' , cards);
+            let noTypesArray = cards.filter(card => card.types);
+            let noTypesArrayNew = noTypesArray.filter(card => card.types[0] === event.target.value)
+           
+            console.log("Filtered Array", noTypesArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noTypesArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
+        })
     }
 
     if(value === "2") {
@@ -109,6 +156,33 @@ menu1.addEventListener("change", function(event) {
         menu5.setAttribute("class", "hide")
         menu6.setAttribute("class", "hide")
         menu7.setAttribute("class", "hide")
+
+        menu4.addEventListener("change", function(event) {
+            console.log("If statement", typeof(event.target.value))
+            console.log('type of cards' , cards);
+            let noCmcArray = cards.filter(card => card.cmc);
+            let noCmcArrayNew = noCmcArray.filter(card => card.cmc === Number(event.target.value))
+           
+            console.log("Filtered Array", noCmcArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noCmcArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
+        })
     }
 
     if(value === "3") {
@@ -118,6 +192,33 @@ menu1.addEventListener("change", function(event) {
         menu5.setAttribute("class", "show")
         menu6.setAttribute("class", "hide")
         menu7.setAttribute("class", "hide")
+
+        menu5.addEventListener("keyup", function(event) {
+            console.log("If statement", typeof(event.target.value))
+            console.log('type of cards' , cards);
+            let noCmcArray = cards.filter(card => card.setName);
+            let noCmcArrayNew = noCmcArray.filter(card => card.setName.includes(event.target.value))
+           
+            console.log("Filtered Array", noCmcArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noCmcArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
+        })
     }
 
     if(value === "4") {
@@ -127,6 +228,33 @@ menu1.addEventListener("change", function(event) {
         menu5.setAttribute("class", "hide")
         menu6.setAttribute("class", "show")
         menu7.setAttribute("class", "hide")
+
+        menu6.addEventListener("change", function(event) {
+            console.log("If statement", event.target.value)
+            console.log('type of cards' , cards);
+            let noTypesArray = cards.filter(card => card.rarity);
+            let noTypesArrayNew = noTypesArray.filter(card => card.rarity === event.target.value)
+           
+            console.log("Filtered Array", noTypesArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noTypesArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
+        })
     }
 
     if(value === "5") {
@@ -136,5 +264,49 @@ menu1.addEventListener("change", function(event) {
         menu5.setAttribute("class", "hide")
         menu6.setAttribute("class", "hide")
         menu7.setAttribute("class", "show")
+
+        menu7.addEventListener("keyup", function(event) {
+            console.log("If statement", typeof(event.target.value))
+            console.log('type of cards' , cards);
+            let noCmcArray = cards.filter(card => card.name);
+            let noCmcArrayNew = noCmcArray.filter(card => card.name.includes(event.target.value))
+           
+            console.log("Filtered Array", noCmcArrayNew)
+
+            let mainEL = document.getElementById('main')
+            mainEL.innerHTML = ""
+            for(const ele of noCmcArrayNew) {
+                let tempEL = document.createElement('div')
+                tempEL.classList.add('cardBlock')
+                let tempImage = ""
+                if(ele.imageUrl) {
+                  tempImage = ele.imageUrl
+                } else {
+                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                }
+                tempEL.setAttribute("name", `${ele.multiverseid}`);
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
+                <p>${ele.name}</p>`
+                tempEL.addEventListener("click", cardClicked)
+                mainEL.appendChild(tempEL)
+             }
+        })
+    }
+
+    if(value === "100") {
+        menu2.setAttribute("class", "hide")
+        menu3.setAttribute("class", "hide")
+        menu4.setAttribute("class", "hide")
+        menu5.setAttribute("class", "hide")
+        menu6.setAttribute("class", "hide")
+        menu7.setAttribute("class", "hide")
+
+        
     }
 })
+
+let noProp = document.getElementsByClassName("noProp")
+console.log("No prop class", noProp[0].item()) 
+ for(let i = 0; i < noProp.length; i++) {
+     console.log("this works", i)
+ }
