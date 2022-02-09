@@ -12,8 +12,8 @@ for(const ele of filteredArray) {
    let mainEL = document.getElementById('main')
    let tempEL = document.createElement('div')
    tempEL.classList.add('cardBlock')
-   tempEL.innerHTML = `<img class = "cardIMG noProp" src=${ele.imageUrl}>
-   <p class = "noProp">${ele.name}</p>`;
+   tempEL.innerHTML = `<img class = "cardIMG noProp" src=${ele.imageUrl} name = ${ele.multiverseid}>
+   <p class = "noProp" name = ${ele.multiverseid}>${ele.name}</p>`;
    tempEL.setAttribute("name", `${ele.multiverseid}`);
    tempEL.addEventListener("click", cardClicked)
    mainEL.appendChild(tempEL)
@@ -23,6 +23,7 @@ for(const ele of filteredArray) {
 
 function cardClicked(event) {
     console.log("Event", event.target.getAttribute('name'))
+    console.log("ActualEvent", event.target)
     localStorage.setItem("cardNumber", event.target.getAttribute('name'))
     
 
@@ -51,8 +52,8 @@ function getCards() {
        let tempEL = document.createElement('div')
        tempEL.classList.add('cardBlock')
        tempEL.setAttribute("name", `${ele.multiverseid}`);
-       tempEL.innerHTML = `<img class = "cardIMG" src=${ele.imageUrl}>
-       <p>${ele.name}</p>`
+       tempEL.innerHTML = `<img class = "cardIMG" src=${ele.imageUrl} name = ${ele.multiverseid}>
+       <p name = ${ele.multiverseid}>${ele.name}</p>`
        tempEL.addEventListener("click", cardClicked)
        mainEL.appendChild(tempEL)
     }
@@ -108,8 +109,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
@@ -144,8 +145,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
@@ -180,8 +181,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
@@ -216,8 +217,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
@@ -252,8 +253,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
@@ -288,8 +289,8 @@ menu1.addEventListener("change", function(event) {
                     tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
                 }
                 tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage}>
-                <p>${ele.name}</p>`
+                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                <p name = ${ele.multiverseid}>${ele.name}</p>`
                 tempEL.addEventListener("click", cardClicked)
                 mainEL.appendChild(tempEL)
              }
