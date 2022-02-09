@@ -9,16 +9,50 @@
 </head>
 <body>
    <div class = indexlinks>
-       <a href="">Home Page</a>
-       <a href="">About</a>
+       <a href="./about.html">About</a>
    </div>
    <div class = "heading">
        <h1>Welcome to MTG Searcher</h1>
        <h3>Use the dropdown menus below to filter your search</h3>
    </div>
    <div class = "menus">
-       <input type="select" id = menu1>
-       <input type="select" id = menu2>
+       <select id = "menu1">
+           <option value="100">Select Category to Filter</option>
+        <option value="0">Color ID</option>
+           <option value="1">Type</option>
+           <option value="2">CMC</option>
+           <option value="3">Set</option>
+           <option value="4">Rarity</option>
+           <option value="5">Search By Name</option>
+       </select>
+       <select id = "menu2" class = "hide">
+        <option selected>Select Color</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+    </select>
+    <select id = "menu3" class = "hide">
+        <option selected>Select Type</option>
+        <option value="Creature">Creature</option>
+        <option value="Sorcery">Sorcery</option>
+        <option value="Enchantment">Enchantment</option>
+        <option value="Land">Land</option>
+        <option value="Planeswalker">Planeswalker</option>
+        <option value="Instant">Instant</option>
+        <option value="Artifact">Artifact</option>
+    </select>
+    <input type="number" id = "menu4" class = "hide">
+    <input type="search" id = "menu5" class = "hide">
+    <select id = "menu6" class = "hide">
+        <option selected>Select Rarity</option>
+        <option value="Common">Common</option>
+        <option value="Uncommon">Uncommon</option>
+        <option value="Rare">Rare</option>
+        <option value="Legendary">Legendary</option>
+    </select>
+    <input type="search" id = "menu7" class = "hide">
    </div>
    <div id = "main">
     
