@@ -1,12 +1,12 @@
 h1 { 
-    border: solid ;
+    
 
     text-align: center;
     color:white;
-    border: solid black;
+    
 }
 img {
-    border: solid;
+   
     width: 150px;
     
 
@@ -23,9 +23,14 @@ border:white;
 
 }
 .peoplebox {
-    width: 50%;
-
-
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 10px;
+background-color: #526c6b;
+padding: 1% 2% 1% 2% ;
+margin-left: 2%;
+margin-top: 2%;
+opacity: 0.8;
 }
 
 /* .people > div {
@@ -55,7 +60,7 @@ width: 100%; */
 
 p{
 color:white;
-border: solid black;
+/* border: solid black; */
 
 /* background-color: white; */
 
