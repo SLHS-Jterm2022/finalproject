@@ -1,12 +1,22 @@
 let cards;
 let currentPage = 1;
+
+const menu1 = document.getElementById("menu1");
+const menu2 = document.getElementById("menu2");
+const menu3 = document.getElementById("menu3");
+const menu4 = document.getElementById("menu4");
+const menu5 = document.getElementById("menu5");
+const menu6 = document.getElementById("menu6");
+const menu7 = document.getElementById("menu7");
+
 fetch("https://api.magicthegathering.io/v1/cards")
 .then(res => res.json())
 .then(respos => cards = respos.cards)
 .then(data => {
 
 console.log("number of cards", data)
-let filteredArray = data.filter(ele => ele.imageUrl)
+let filteredArray1 = data.filter(ele => ele.imageUrl);
+let filteredArray = filteredArray1.filter(ele => ele.multiverseid)
 
 for(const ele of filteredArray) {
    let mainEL = document.getElementById('main')
@@ -25,7 +35,7 @@ function cardClicked(event) {
     console.log("Event", event.target.getAttribute('name'))
     console.log("ActualEvent", event.target)
     localStorage.setItem("cardNumber", event.target.getAttribute('name'))
-    
+    window.location = "card.html"
 
 
 }
@@ -34,6 +44,12 @@ function cardClicked(event) {
 
 
 function getCards() {
+    menu2.setAttribute("class", "hide")
+    menu3.setAttribute("class", "hide")
+    menu4.setAttribute("class", "hide")
+    menu5.setAttribute("class", "hide")
+    menu6.setAttribute("class", "hide")
+    menu7.setAttribute("class", "hide")
     currentPage ++;
     console.log("In Function Get Card:", currentPage)
     fetch(`https://api.magicthegathering.io/v1/cards?page=${currentPage}`)
@@ -69,13 +85,6 @@ console.log("First Value", firstValue)
 
 //made an alteration
 
-const menu1 = document.getElementById("menu1");
-const menu2 = document.getElementById("menu2");
-const menu3 = document.getElementById("menu3");
-const menu4 = document.getElementById("menu4");
-const menu5 = document.getElementById("menu5");
-const menu6 = document.getElementById("menu6");
-const menu7 = document.getElementById("menu7");
 
 menu1.addEventListener("change", function(event) {
     console.log("Event: Menu 1 change", event.target.value)
@@ -92,7 +101,7 @@ menu1.addEventListener("change", function(event) {
         menu2.addEventListener("change", function(event) {
             console.log("If statement", event.target.value)
             console.log('type of cards' , cards);
-            let noColorsArray = cards.filter(card => card.colors);
+            let noColorsArray = cards.filter(card => card.colors && card.imageUrl && card.multiverseid);
             let noColorsArrayNew = noColorsArray.filter(card => card.colors[0] === event.target.value)
            
             console.log("Filtered Array", noColorsArrayNew)
@@ -128,7 +137,7 @@ menu1.addEventListener("change", function(event) {
         menu3.addEventListener("change", function(event){
             console.log("If statement", event.target.value)
             console.log('type of cards' , cards);
-            let noTypesArray = cards.filter(card => card.types);
+            let noTypesArray = cards.filter(card => card.types && card.imageUrl && card.multiverseid);
             let noTypesArrayNew = noTypesArray.filter(card => card.types[0] === event.target.value)
            
             console.log("Filtered Array", noTypesArrayNew)
@@ -164,7 +173,7 @@ menu1.addEventListener("change", function(event) {
         menu4.addEventListener("change", function(event) {
             console.log("If statement", typeof(event.target.value))
             console.log('type of cards' , cards);
-            let noCmcArray = cards.filter(card => card.cmc);
+            let noCmcArray = cards.filter(card => card.cmc && card.imageUrl && card.multiverseid);
             let noCmcArrayNew = noCmcArray.filter(card => card.cmc === Number(event.target.value))
            
             console.log("Filtered Array", noCmcArrayNew)
@@ -200,7 +209,7 @@ menu1.addEventListener("change", function(event) {
         menu5.addEventListener("keyup", function(event) {
             console.log("If statement", typeof(event.target.value))
             console.log('type of cards' , cards);
-            let noCmcArray = cards.filter(card => card.setName);
+            let noCmcArray = cards.filter(card => card.setName && card.imageUrl && card.multiverseid);
             let noCmcArrayNew = noCmcArray.filter(card => card.setName.includes(event.target.value))
            
             console.log("Filtered Array", noCmcArrayNew)
@@ -236,7 +245,7 @@ menu1.addEventListener("change", function(event) {
         menu6.addEventListener("change", function(event) {
             console.log("If statement", event.target.value)
             console.log('type of cards' , cards);
-            let noTypesArray = cards.filter(card => card.rarity);
+            let noTypesArray = cards.filter(card => card.rarity && card.imageUrl && card.multiverseid);
             let noTypesArrayNew = noTypesArray.filter(card => card.rarity === event.target.value)
            
             console.log("Filtered Array", noTypesArrayNew)
@@ -272,7 +281,7 @@ menu1.addEventListener("change", function(event) {
         menu7.addEventListener("keyup", function(event) {
             console.log("If statement", typeof(event.target.value))
             console.log('type of cards' , cards);
-            let noCmcArray = cards.filter(card => card.name);
+            let noCmcArray = cards.filter(card => card.name && card.imageUrl && card.multiverseid);
             let noCmcArrayNew = noCmcArray.filter(card => card.name.includes(event.target.value))
            
             console.log("Filtered Array", noCmcArrayNew)
@@ -308,9 +317,3 @@ menu1.addEventListener("change", function(event) {
         
     }
 })
-
-let noProp = document.getElementsByClassName("noProp")
-console.log("No prop class", noProp[0].item()) 
- for(let i = 0; i < noProp.length; i++) {
-     console.log("this works", i)
- }
