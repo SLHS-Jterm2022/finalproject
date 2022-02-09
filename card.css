@@ -10,6 +10,8 @@
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
+
+
 img {
     display: block;
     width: 50%;
@@ -26,15 +28,31 @@ body {
 }
 
 a {
-    color: rgba(230, 17, 17, 0.952);
-    margin-left: 2%;
+    color: whitesmoke;
+    margin-left: 4%;
     margin-bottom: -5%;
+    margin-top: 0.3%;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
 }
 
 .a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.a > a {
+    background-color: rgb(218, 185, 0);
+    text-decoration: none;
+    height: 8%;
+    width: 6.7%;
+    display: block;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
