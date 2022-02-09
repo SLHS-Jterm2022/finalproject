@@ -1,7 +1,9 @@
 let planetData;
 let cards;
+let cardNumber = localStorage.getItem("cardNumber")
+console.log("Card Number:", cardNumber)
 
-fetch("https://api.magicthegathering.io/v1/cards/457213")
+fetch(`https://api.magicthegathering.io/v1/cards/${cardNumber}`)
     .then(res => res.json())
     .then(respos => cards = respos)
     .then(data => {
@@ -21,3 +23,4 @@ fetch("https://api.magicthegathering.io/v1/cards/457213")
             <p>Rarity: ${card.rarity}</p>`
             mainEL.appendChild(tempElement);
     })
+
