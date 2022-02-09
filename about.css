@@ -90,5 +90,19 @@ a{
 color: white;
 text-decoration: none;
 flex-direction: row;
+/* text-align: center; */
+}
+.homepage{
+background-color: #526c6b;
+text-decoration: none;
+height: 8%;
+width: 6.7%;
+margin: 0 auto;
+text-align: center;
+}
+a:hover{
+color: black;
+transition: 1s;
+box-shadow: 0 0 10px black;
 
 }
