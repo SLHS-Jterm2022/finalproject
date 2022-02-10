@@ -8,6 +8,12 @@ background-color: rgb(218, 185, 0);
 text-decoration: none;
 }
 
+a:hover {
+    color: black;
+    transition: 1s;
+    box-shadow: 0 0 10px;
+}
+
 #main{
     border: 1px solid black;
     height: 550px;
