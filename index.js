@@ -108,21 +108,30 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noColorsArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
-                mainEL.appendChild(tempEL)
-             }
+            if(noColorsArrayNew.length === 0) {
+               let tempEL = document.createElement("div") 
+               tempEL.setAttribute("class", "errorMessage")
+               tempEL.innerText = "Nothing matches your search. Try Load More."
+               mainEL.appendChild(tempEL)
+            } else {
+                
+                for(const ele of noColorsArrayNew) {
+                    let tempEL = document.createElement('div')
+                    tempEL.classList.add('cardBlock')
+                    let tempImage = ""
+                    if(ele.imageUrl) {
+                      tempImage = ele.imageUrl
+                    } else {
+                        tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                    }
+                    tempEL.setAttribute("name", `${ele.multiverseid}`);
+                    tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                    <p name = ${ele.multiverseid}>${ele.name}</p>`
+                    tempEL.addEventListener("click", cardClicked)
+                    mainEL.appendChild(tempEL)
+                 }
+            } 
+            
         })
     }
 
@@ -144,20 +153,28 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noTypesArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
+            if(noTypesArrayNew.length === 0) {
+                let tempEL = document.createElement("div") 
+                tempEL.setAttribute("class", "errorMessage")
+                tempEL.innerText = "Nothing matches your search. Try Load More."
                 mainEL.appendChild(tempEL)
+            } else {
+                
+                for(const ele of noTypesArrayNew) {
+                    let tempEL = document.createElement('div')
+                    tempEL.classList.add('cardBlock')
+                    let tempImage = ""
+                    if(ele.imageUrl) {
+                      tempImage = ele.imageUrl
+                    } else {
+                        tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                    }
+                    tempEL.setAttribute("name", `${ele.multiverseid}`);
+                    tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                    <p name = ${ele.multiverseid}>${ele.name}</p>`
+                    tempEL.addEventListener("click", cardClicked)
+                    mainEL.appendChild(tempEL)
+                 }
              }
         })
     }
@@ -180,20 +197,28 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noCmcArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
+            if(noCmcArrayNew.length === 0) {
+                let tempEL = document.createElement("div") 
+                tempEL.setAttribute("class", "errorMessage")
+                tempEL.innerText = "Nothing matches your search. Try Load More."
                 mainEL.appendChild(tempEL)
+             } else {
+                 
+                 for(const ele of noCmcArrayNew) {
+                     let tempEL = document.createElement('div')
+                     tempEL.classList.add('cardBlock')
+                     let tempImage = ""
+                     if(ele.imageUrl) {
+                       tempImage = ele.imageUrl
+                     } else {
+                         tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                     }
+                     tempEL.setAttribute("name", `${ele.multiverseid}`);
+                     tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                     <p name = ${ele.multiverseid}>${ele.name}</p>`
+                     tempEL.addEventListener("click", cardClicked)
+                     mainEL.appendChild(tempEL)
+                  }
              }
         })
     }
@@ -216,20 +241,28 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noCmcArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
+            if(noCmcArrayNew.length === 0) {
+                let tempEL = document.createElement("div") 
+                tempEL.setAttribute("class", "errorMessage")
+                tempEL.innerText = "Nothing matches your search. Try Load More."
                 mainEL.appendChild(tempEL)
+             } else {
+                 
+                 for(const ele of noCmcArrayNew) {
+                     let tempEL = document.createElement('div')
+                     tempEL.classList.add('cardBlock')
+                     let tempImage = ""
+                     if(ele.imageUrl) {
+                       tempImage = ele.imageUrl
+                     } else {
+                         tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                     }
+                     tempEL.setAttribute("name", `${ele.multiverseid}`);
+                     tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                     <p name = ${ele.multiverseid}>${ele.name}</p>`
+                     tempEL.addEventListener("click", cardClicked)
+                     mainEL.appendChild(tempEL)
+                  }
              }
         })
     }
@@ -252,20 +285,28 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noTypesArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
+            if(noTypesArrayNew.length === 0) {
+                let tempEL = document.createElement("div") 
+                tempEL.setAttribute("class", "errorMessage")
+                tempEL.innerText = "Nothing matches your search. Try Load More."
                 mainEL.appendChild(tempEL)
+             } else {
+
+                 for(const ele of noTypesArrayNew) {
+                     let tempEL = document.createElement('div')
+                     tempEL.classList.add('cardBlock')
+                     let tempImage = ""
+                     if(ele.imageUrl) {
+                       tempImage = ele.imageUrl
+                     } else {
+                         tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                     }
+                     tempEL.setAttribute("name", `${ele.multiverseid}`);
+                     tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                     <p name = ${ele.multiverseid}>${ele.name}</p>`
+                     tempEL.addEventListener("click", cardClicked)
+                     mainEL.appendChild(tempEL)
+                  }
              }
         })
     }
@@ -288,20 +329,28 @@ menu1.addEventListener("change", function(event) {
 
             let mainEL = document.getElementById('main')
             mainEL.innerHTML = ""
-            for(const ele of noCmcArrayNew) {
-                let tempEL = document.createElement('div')
-                tempEL.classList.add('cardBlock')
-                let tempImage = ""
-                if(ele.imageUrl) {
-                  tempImage = ele.imageUrl
-                } else {
-                    tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
-                }
-                tempEL.setAttribute("name", `${ele.multiverseid}`);
-                tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
-                <p name = ${ele.multiverseid}>${ele.name}</p>`
-                tempEL.addEventListener("click", cardClicked)
+            if(noCmcArrayNew.length === 0) {
+                let tempEL = document.createElement("div") 
+                tempEL.setAttribute("class", "errorMessage")
+                tempEL.innerText = "Nothing matches your search. Try Load More."
                 mainEL.appendChild(tempEL)
+             } else {
+
+                 for(const ele of noCmcArrayNew) {
+                     let tempEL = document.createElement('div')
+                     tempEL.classList.add('cardBlock')
+                     let tempImage = ""
+                     if(ele.imageUrl) {
+                       tempImage = ele.imageUrl
+                     } else {
+                         tempImage = "https://th.bing.com/th/id/OIP.AC9frN1qFnn-I2JCycN8fwHaEK?pid=ImgDet&rs=1"
+                     }
+                     tempEL.setAttribute("name", `${ele.multiverseid}`);
+                     tempEL.innerHTML = `<img class = "cardIMG" src=${tempImage} name = ${ele.multiverseid}>
+                     <p name = ${ele.multiverseid}>${ele.name}</p>`
+                     tempEL.addEventListener("click", cardClicked)
+                     mainEL.appendChild(tempEL)
+                  }
              }
         })
     }

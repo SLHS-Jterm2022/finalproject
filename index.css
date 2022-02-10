@@ -16,12 +16,13 @@ a:hover {
 
 #main{
     border: 1px solid black;
-    height: 550px;
+    height: 70vh;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-evenly;
     overflow: scroll;
+    margin-top: 1%;
     
 }
 
@@ -33,7 +34,7 @@ a:hover {
 
 .cardBlock{
     border: 1px solid black;
-    width: 25%;
+    width: 20%;
 }
 
 .cardIMG{
@@ -72,3 +73,15 @@ body {
     display: none;
 }
 
+#loadMore {
+    display: block;
+    margin: 2% auto;
+}
+
+.errorMessage {
+    background-color: rgb(218, 185, 0);
+    height: 10%;
+    padding: 1% 1% 1% 1%;
+    margin-top: 2%;
+    font-size: x-large;
+}
